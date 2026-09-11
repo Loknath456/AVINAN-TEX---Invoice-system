@@ -74,21 +74,29 @@ npm install
 
 ## Environment Variables
 
-Create a `.env` file in the project root based on `.env.example`.
-
-Example:
+This application uses the following environment variables in the browser:
 
 ```env
-VITE_SUPABASE_URL="https://your-project.supabase.co"
-VITE_SUPABASE_PUBLISHABLE_KEY="your_supabase_anonymous_key"
-VITE_SUPABASE_PROJECT_ID="your_project_id"
+VITE_SUPABASE_URL=
+VITE_SUPABASE_PUBLISHABLE_KEY=
 ```
 
-Important:
+### Required values
 
-- Do not commit the real `.env` file
-- Keep secrets out of version control
-- Use `.env.example` as the template for setup
+- `VITE_SUPABASE_URL`: your Supabase project URL
+- `VITE_SUPABASE_PUBLISHABLE_KEY`: your Supabase anonymous/public API key
+
+Create a local `.env` file in the project root using the values from your Supabase project. Do not commit the real `.env` file.
+
+### Vercel deployment
+
+1. Open your Vercel project.
+2. Go to Project Settings.
+3. Open Environment Variables.
+4. Add the required variables:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_PUBLISHABLE_KEY`
+5. Redeploy the application.
 
 ## Run Locally
 
